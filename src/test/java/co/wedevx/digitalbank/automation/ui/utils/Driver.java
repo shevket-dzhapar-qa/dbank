@@ -44,7 +44,7 @@ public class Driver {
 
                     options.addArguments("--window-size=1920,1080");
                     options.addArguments("disable-extensions");
-                    options.setExperimentalOption("useAtomationExtension", false);
+                    options.setExperimentalOption("useAutomationExtension", false);
                     options.addArguments("--proxy-server='direct://'");
                     options.addArguments("--proxy-bypass-list=*");
                     options.addArguments("start-maximized");
