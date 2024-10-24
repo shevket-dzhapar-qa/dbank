@@ -15,6 +15,9 @@ import static co.wedevx.digitalbank.automation.ui.utils.Driver.getDriver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RegistrationSteps {
+    public RegistrationSteps() {
+
+    }
 
     RegistrationPage registrationPage = new RegistrationPage(getDriver());
     List<Map<String, Object>> nextValList = new ArrayList<>();
