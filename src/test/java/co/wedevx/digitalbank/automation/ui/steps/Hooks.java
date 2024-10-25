@@ -34,10 +34,13 @@
 
 package co.wedevx.digitalbank.automation.ui.steps;
 
+import co.wedevx.digitalbank.automation.ui.utils.ConfigReader;
 import co.wedevx.digitalbank.automation.ui.utils.DBUtils;
 import co.wedevx.digitalbank.automation.ui.utils.Driver;
 import io.cucumber.java.*;
 import org.openqa.selenium.WebDriver;
+
+import static co.wedevx.digitalbank.automation.ui.utils.Driver.getDriver;
 
 public class Hooks {
 
@@ -48,8 +51,9 @@ public class Hooks {
 
     @Before("not @Registration")
     public void the_user_on_dbank_homepage() {
-        WebDriver driver = Driver.getDriver(); // Получаем драйвер внутри метода
-        driver.get("https://dbank-qa.wedevx.co/bank/login");
+        WebDriver driver = getDriver(); // Получаем драйвер внутри метода
+//        driver.get("https://dbank-qa.wedevx.co/bank/login");
+        getDriver().get(ConfigReader.getPropertiesValue("digitalbank.createnewcheckingurl"));
     }
 
     @After()

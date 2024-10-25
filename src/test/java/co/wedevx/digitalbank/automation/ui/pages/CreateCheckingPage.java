@@ -53,7 +53,7 @@ public class CreateCheckingPage extends BaseMenuPage{
         newCheckingButton.click();
 
 
-        assertEquals(ConfigReader.getPropertiesValue("digitalbank.createnewcheckingurl"), getDriver().getCurrentUrl(), "Error message");
+        assertEquals(ConfigReader.getPropertiesValue("digitalbank.createnewcheckingurl"), getDriver().getCurrentUrl(), "Error message" + ConfigReader.getPropertiesValue("digitalbank.createnewcheckingurl"));
 
         //the user selects account type
         if (testDataForOneCheckingAccount.getCheckingAccountType().equalsIgnoreCase("Standard Checking")) {
